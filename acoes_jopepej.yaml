@@ -1,0 +1,225 @@
+openapi: 3.1.0
+info:
+  title: Ações Internas — GPT Omega Jopepej
+  description: API de ações reflexivas, evolutivas e seguras do agente GPT Omega
+  version: 1.0.0
+servers:
+  - url: https://jopepej.onrender.com
+    description: Servidor oficial do agente Jopepej
+paths:
+  /registrar-agente:
+    post:
+      operationId: registrarAgente
+      summary: "Registra novo agente com nome, descrição e ações"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '200':
+          description: "Agente registrado"
+  /observer:
+    post:
+      operationId: observer
+      summary: "Registra log de execução do agente"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '200':
+          description: "Log armazenado"
+  /criarPromptMatriz:
+    post:
+      operationId: criarPromptMatriz
+      summary: "Gera prompt base com domínio, estilo e propósito"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '200':
+          description: "Prompt gerado"
+  /gerarBlueprintDoAgente:
+    post:
+      operationId: gerarBlueprintDoAgente
+      summary: "Gera blueprint funcional do agente"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '200':
+          description: "Blueprint retornado"
+  /avaliarAgenteFilho:
+    post:
+      operationId: avaliarAgenteFilho
+      summary: "Avalia a estrutura e qualidade de um agente definido"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                definicao_agente:
+                  type: string
+      responses:
+        '200':
+          description: "Avaliação retornada"
+  /refinarAgentePorReflexao:
+    post:
+      operationId: refinarAgentePorReflexao
+      summary: "Aplica refinamento reflexivo em agente com base em falha"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                resultado_avaliacao:
+                  type: string
+      responses:
+        '200':
+          description: "Agente refinado"
+  /simularShadowDeploy:
+    post:
+      operationId: simularShadowDeploy
+      summary: "Executa simulação segura do agente em modo sombra"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '200':
+          description: "Simulação executada"
+  /ativarGovernanceGate:
+    post:
+      operationId: ativarGovernanceGate
+      summary: "Aplica política de segurança, alinhamento e compliance no agente"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '200':
+          description: "Validação aplicada"
+  /validarChecklistDeCriacao:
+    post:
+      operationId: validarChecklistDeCriacao
+      summary: "Valida todos os componentes obrigatórios do agente"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '200':
+          description: "Checklist validado"
+  /simularSelfDiagnostic:
+    post:
+      operationId: simularSelfDiagnostic
+      summary: "Executa autodiagnóstico técnico do agente com base em entrada"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                entrada_usuario:
+                  type: string
+      responses:
+        '200':
+          description: "Resultado do diagnóstico"
+  /gerarQuestaoDeReforco:
+    post:
+      operationId: gerarQuestaoDeReforco
+      summary: "Gera questão estilo concurso com gabarito e justificativa"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                conteudo_gerado:
+                  type: string
+      responses:
+        '200':
+          description: "Questão gerada"
+  /aplicarReflexionChain:
+    post:
+      operationId: aplicarReflexionChain
+      summary: "Aplica cadeia reflexiva sobre conteúdo com falha"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                conteudo_gerado:
+                  type: string
+      responses:
+        '200':
+          description: "Reflexão realizada"
+  /aplicarProtocoloOmega:
+    post:
+      operationId: aplicarProtocoloOmega
+      summary: "Aplica protocolo SILENT+3X para validar resposta sensível"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                resposta:
+                  type: string
+      responses:
+        '200':
+          description: "Validação tripla aplicada"
+  /traduzirJSONSchemaParaPrompt:
+    post:
+      operationId: traduzirJSONSchemaParaPrompt
+      summary: "Converte JSON Schema em prompt natural e compreensível"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                json_schema:
+                  type: string
+      responses:
+        '200':
+          description: "Prompt traduzido"
+  /emitirAlertaDeDivergencia:
+    post:
+      operationId: emitirAlertaDeDivergencia
+      summary: "Gera alerta automático sobre divergências doutrinárias ou jurisprudenciais"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '200':
+          description: "Alerta emitido"
